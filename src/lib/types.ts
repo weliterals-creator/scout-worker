@@ -11,6 +11,35 @@ export interface FounderLead {
   niche?: string;
 }
 
+export type PitchOfferType = "crm" | "services" | "hybrid";
+
+export interface FounderPitchResult {
+  offerType: PitchOfferType;
+  founderName: string;
+  companyName: string;
+  role: string;
+  headline?: string;
+  linkedinUrl?: string;
+
+  // Pitches crafted in Vinayak's founder voice
+  linkedinConnectionNote: string; // Under 300 chars
+  linkedinDirectMessage: string;  // Short & punchy
+  coldEmailSubject: string;
+  coldEmailBody: string;
+  followUpMessage: string;
+}
+
+export interface LinkedInFounderResult {
+  id: string;
+  name: string;
+  role: string;
+  companyName: string;
+  location: string;
+  linkedinUrl: string;
+  snippet: string;
+  extractedKeywords: string[];
+}
+
 export interface BusinessAuditReport {
   id: string;
   companyName: string;

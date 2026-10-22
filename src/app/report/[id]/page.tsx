@@ -21,7 +21,7 @@ export default async function ReportPage({
   const report = await getAuditReport(id);
 
   if (!report) {
-    notFound();
+    return notFound();
   }
 
   return (
