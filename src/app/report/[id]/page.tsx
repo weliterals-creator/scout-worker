@@ -12,12 +12,10 @@ import {
   Zap,
 } from "lucide-react";
 
-export default async function ReportPage({
-  params,
-}: {
-  params: { id: string };
+export default async function ReportPage(props: {
+  params: Promise<{ id: string }>;
 }) {
-  const { id } = params;
+  const { id } = await props.params;
   const report = await getAuditReport(id);
 
   if (!report) {
