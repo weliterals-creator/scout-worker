@@ -12,6 +12,8 @@ import {
   Zap,
 } from "lucide-react";
 
+export const dynamic = "force-dynamic";
+
 export default async function ReportPage(props: {
   params: Promise<{ id: string }>;
 }) {

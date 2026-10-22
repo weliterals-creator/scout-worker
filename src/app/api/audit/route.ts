@@ -3,6 +3,8 @@ import { extractWebsiteSignals } from "../../../lib/web-scraper";
 import { generateBusinessAudit } from "../../../lib/audit-generator";
 import { saveAuditReport, getAuditReport } from "../../../lib/store";
 
+export const dynamic = "force-dynamic";
+
 export async function POST(req: Request) {
   try {
     const body = await req.json().catch(() => ({}));

@@ -6,6 +6,8 @@ import {
 } from "../../../lib/linkedin-search";
 import type { LinkedInFounderResult } from "../../../lib/types";
 
+export const dynamic = "force-dynamic";
+
 export async function POST(req: Request) {
   try {
     const body = await req.json().catch(() => ({}));

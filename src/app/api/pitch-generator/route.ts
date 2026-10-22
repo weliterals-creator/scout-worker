@@ -2,6 +2,8 @@ import { NextResponse } from "next/server";
 import { generateFounderPitch } from "../../../lib/pitch-generator";
 import type { PitchOfferType } from "../../../lib/types";
 
+export const dynamic = "force-dynamic";
+
 export async function POST(req: Request) {
   try {
     const body = await req.json().catch(() => ({}));

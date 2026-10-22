@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server";
 import type { FounderLead } from "../../../lib/types";
 
+export const dynamic = "force-dynamic";
+
 // Curated starter seeds across major agency/creator/founder categories
 const SAMPLE_FOUNDER_SEEDS: FounderLead[] = [
   {
