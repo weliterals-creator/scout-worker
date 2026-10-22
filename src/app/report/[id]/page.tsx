@@ -15,9 +15,9 @@ import {
 export default async function ReportPage({
   params,
 }: {
-  params: Promise<{ id: string }>;
+  params: { id: string };
 }) {
-  const { id } = await params;
+  const { id } = params;
   const report = await getAuditReport(id);
 
   if (!report) {
